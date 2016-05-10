@@ -66,10 +66,15 @@ if (isset($_POST['button2']))
    echo "4.00$ has been used ". $_POST['Cardnumb']; 
 }  
 
-if (isset($_POST['button5'])) 
+elseif (isset($_POST['button5'])) 
 { 
    echo "5.00$ has been used ". $_POST['Cardnumb']; 
 }  
+ 
+$log_ info = date("m/d/Y, h:i:s A") . " - " . $_POST['Cardnumb'] . " utilized dollar amount";
+$save_name = fopen('lunch_log.txt', 'a');
+fwrite($save_name,$log_info);
+fclose($save_name);
  
 ?>
 </body>
