@@ -43,58 +43,59 @@ if( $conn === false )
 	  
 	  
 	  /* Returns users id, want it to also return Name if return buyer */
-
+	$Bpressed = '$3';
 	
-	function getButton(){  
-	   $Bpressed = null;
-	if(isset($_POST['sub'])) 
-	{
-		echo "<b> Your ID is </b>". $_POST['Cardnumb'];
-			$fdf = 'Cardnumb';
-	}
+	function setButton(){  
+	   
+	
 
       /* Buttons 1.00$ to 5.00$ */
 	if (isset($_POST['button1'])) 
 	{ 
-		$Bpressed = $_POST['button1'];
+		$Bpressed = "$1";
 	}  
 	if (isset($_POST['button2'])) 
 	{ 
-		$Bpressed = $_POST['button2'];
+		$Bpressed = "$2";
 	} 
 
- if (isset($_POST['button3'])) 
-{ 
+	if (isset($_POST['button3'])) 
+	{ 
    
-   $Bpressed = $_POST['button3'];
-} 
+		$Bpressed = "$3";
+	} 
 
- if (isset($_POST['button4'])) 
-{ 
+	if (isset($_POST['button4'])) 
+	{ 
    
-   $Bpressed = $_POST['button4'];
-}  
+		$Bpressed = "$4";
+	}  
 
- elseif (isset($_POST['button5'])) 
-{ 
+	elseif (isset($_POST['button5'])) 
+	{ 
     
-   $Bpressed = $_POST['button5'];
-}  
+		$Bpressed = "$5";
+	}  
 
-
-//$log_info = date("m/d/Y, h:i:s A") . " - " .  " cardnumb " . &Bpressed;
+	 return $Bpressed;
+	 
+	 }
+	  
+	  setButton();
+	  
+	  echo $Bpressed . " has been used by ";
+	 
+	 
+/*$log_info = date("m/d/Y, h:i:s A") . " - " .  " cardnumb " . $Bpressed;
 $save_name = fopen('lunch_log.txt', 'a');
 fwrite($save_name,$log_info);
 fclose($save_name);
+*/
 
- return $Bpressed;
 
 
-	  }
-	  $Bpressed = null;
-	  getButton();
-	  
-	  echo $Bpressed ." has been used by ". $_POST['Cardnumb'];
+
+	 
 	  
 ?>
 </body>
