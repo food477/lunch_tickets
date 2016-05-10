@@ -43,6 +43,8 @@ if( $conn === false )
 	  
 	  
 	  /* Returns users id, want it to also return Name if return buyer */
+	  function getButton (){
+	   $Bpressed = 0;
  if(isset($_POST['sub'])) {
    echo "<b> Your ID is </b>". $_POST['Cardnumb'];
 	$fdf = 'Cardnumb';
@@ -51,34 +53,43 @@ if( $conn === false )
  if (isset($_POST['button1'])) 
 { 
    echo "1.00$ has been used ". $_POST['Cardnumb']; 
+   $Bpressed = 1;
 }  
 
 
 if (isset($_POST['button2'])) 
 { 
    echo "2.00$ has been used ". $_POST['Cardnumb']; 
+   $Bpressed = 2;
 } 
 
  if (isset($_POST['button3'])) 
 { 
    echo "3.00$ has been used ". $_POST['Cardnumb']; 
+   $Bpressed = 3;
 } 
 
  if (isset($_POST['button4'])) 
 { 
    echo "4.00$ has been used ". $_POST['Cardnumb']; 
+   $Bpressed = 4;
 }  
 
 elseif (isset($_POST['button5'])) 
 { 
    echo "5.00$ has been used ". $_POST['Cardnumb']; 
+   $Bpressed = 5;
 }  
  
+
 //$log_ info = date("m/d/Y, h:i:s A") . " - " . " (" . $_POST['cardnumb'] . ") . " utilized dollar amount";
 //$save_name = fopen('lunch_log.txt', 'a');
 //fwrite($save_name,$log_info);
 //fclose($save_name);
+
  
+	  }
+
 ?>
 </body>
 </html>	
