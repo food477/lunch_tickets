@@ -8,6 +8,7 @@
 
 
 <form action="Projtest.php" method="post">
+           <!-- Makes Text entry box, enter button and Dollar amount buttons 1 thru 5 -->
 	     <input type="text" name="Cardnumb"/>
 		 </br>
 		 </br>
@@ -20,8 +21,10 @@
 	</br>
 	
 	
-	
+
 <?php 
+
+ /* attempts to connect to the 'kitchen" sql database */
 $serverName = "(local)\Kitchen";
 
 $connectionOptions = array("Kitchen"=>"SQL_SERVER_MANAGEMENT_STUDIO");
@@ -39,12 +42,12 @@ if( $conn === false )
 
 	  
 	  
-	  
+	  /* Returns users id, want it to also return Name if return buyer */
  if(isset($_POST['sub'])) {
    echo "<b> Your ID is </b>". $_POST['Cardnumb'];
 	$fdf = 'Cardnumb';
    }
-
+      /* Buttons 1.00$ to 5.00$ */
  if (isset($_POST['button1'])) 
 { 
    echo "1.00$ has been used ". $_POST['Cardnumb']; 
