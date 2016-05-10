@@ -83,7 +83,7 @@ elseif (isset($_POST['button5']))
 }  
  
 
-//$log_ info = date("m/d/Y, h:i:s A") . " - " . " (" . $_POST['cardnumb'] . ") . " (" . $_POST['getButton']") ";
+$log_ info = date("m/d/Y, h:i:s A") . " - " .  " cardnumb " . &Bpressed;
 $save_name = fopen('lunch_log.txt', 'a');
 fwrite($save_name,$log_info);
 fclose($save_name);
