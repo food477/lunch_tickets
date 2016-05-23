@@ -6,17 +6,17 @@
 	   </head>   
 <body>
 
-
-<form action="Projtest.php" method="post">
+<h1>Lunch Tickets</h1>
+<form name = "form1" method="post" Action = "submitForm.php">
            <!-- Makes Text entry box, enter button and Dollar amount buttons 1 thru 5 -->
-	     <input type="text" name="Cardnumb"/>
+	     <input type="text" name="Cardnumb" placeholder="Enter Employee Number" />
 		 </br>
 		 </br>
-		 <input type="submit" name='button1' value="1.00$"  />
-		 <input type="submit" name='button2' value="2.00$"  />
-         <input type="submit" name='button3' value="3.00$"  />
-         <input type="submit" name='button4' value="4.00$"  />
-         <input type="submit" name='button5' value="5.00$"  />
+		 <input type="submit" name='button1' value="$1.00"  />
+		 <input type="submit" name='button2' value="$2.00"  />
+         <input type="submit" name='button3' value="$3.00"  />
+         <input type="submit" name='button4' value="$4.00"  />
+         <input type="submit" name='button5' value="$5.00"  />
 	</form>
 	</br>
 	
@@ -43,13 +43,17 @@ if( $conn === false )
 	  
 	  
 	  /* Returns users id, want it to also return Name if return buyer */
+	
+	
+	/* 
+	
 	$Bpressed = '$3';
 	
 	function setButton(){  
 	   
 	
 
-      /* Buttons 1.00$ to 5.00$ */
+       Buttons 1.00$ to 5.00$ 
 	if (isset($_POST['button1'])) 
 	{ 
 		$Bpressed = "$1";
@@ -80,19 +84,22 @@ if( $conn === false )
 	 return $Bpressed;
 	 
 	 }
+	 
 	  
 	  setButton();
 	  
-	  echo $Bpressed . " has been used by ";
+	  
+	  
+	  echo $Bpressed . " has been used by cardNum";
 	 
 	 
-/*$log_info = date("m/d/Y, h:i:s A") . " - " .  " cardnumb " . $Bpressed;
+$log_info = date("m/d/Y, h:i:s A") . " - " . $Bpressed;
 $save_name = fopen('lunch_log.txt', 'a');
 fwrite($save_name,$log_info);
 fclose($save_name);
+
+
 */
-
-
 
 
 	 
